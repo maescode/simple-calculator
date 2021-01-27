@@ -32,41 +32,38 @@
                     <div class="card mx-auto w-100">
                         <div class="card-header">
                             <div id="display" class="bg-light">
-                                <div id="operand">
-                                    0 * 0
-                                </div>
-                                <div id="ans">
-                                    Ans
+                                <input type="text" disabled class="bg-light" id="operands">
+                                <div class="pl-3" id="ans">
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12">
-                                    <button id="add" class="btn btn-primary">+</button>
-                                    <button id="sub" class="btn btn-primary">-</button>
-                                    <button id="div" class="btn btn-primary">&#247;</button>
-                                    <button id="mul" class="btn btn-primary">&#xd7;</button>
-                                    <button id="mul" class="btn btn-primary">&#xd7;</button>
+                                    <button id="add" class="btn btn-primary" value="+">+</button>
+                                    <button id="sub" class="btn btn-primary" value="-">-</button>
+                                    <button id="div" class="btn btn-primary" value="/">&#247;</button>
+                                    <button id="mul" class="btn btn-primary" value="*">&#xd7;</button>
+                                    <button id="mul" class="btn btn-primary" value="**"><i>x</i><sup>2</sup></button>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <button id="one" class="btn">1</button>
-                                    <button id="two" class="btn">2</button>
-                                    <button id="three" class="btn">3</button>
-                                    <button id="four" class="btn">4</button>
+                                    <button id="one" class="btn" value="1">1</button>
+                                    <button id="two" class="btn" value="2">2</button>
+                                    <button id="three" class="btn" value="3">3</button>
+                                    <button id="four" class="btn" value="4">4</button>
 
-                                    <button id="five" class="btn">5</button>
-                                    <button id="six" class="btn">6</button>
-                                    <button id="seven" class="btn">7</button>
-                                    <button id="eight" class="btn">8</button>
+                                    <button id="five" class="btn" value="5">5</button>
+                                    <button id="six" class="btn" value="6">6</button>
+                                    <button id="seven" class="btn" value="7">7</button>
+                                    <button id="eight" class="btn" value="8">8</button>
 
-                                    <button id="nine" class="btn">9</button>
-                                    <button id="zero" class="btn">0</button>
-                                    <button id="decimal" class="btn">.</button>
-                                    <button id="cal" class="btn btn-group btn-danger">Clear</button>
-                                    <button id="cal" class="btn btn-group btn-info">Enter</button>
+                                    <button id="nine" class="btn" value="9">9</button>
+                                    <button id="zero" class="btn" value="0">0</button>
+                                    <button id="decimal" class="btn" value=".">.</button>
+                                    <button id="cal" class="btn btn-group btn-danger" value='C'>Clear</button>
+                                    <button id="cal" class="btn btn-group btn-info" value="=">Calculate</button>
                                 </div>
                             </div>
                         </div>
@@ -91,6 +88,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/maescode/simple-calculator-js-library/calculator.js"></script>
     <script src="./app.js"></script>
 </body>
 

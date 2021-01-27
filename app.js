@@ -1,42 +1,28 @@
-let display = document.querySelector('#operand');
-display.innerHTML = "";
+ let cal = new Calculator();
 
-let one = document.querySelector('#one');
-one.addEventListener('click', function() {
-    display.innerHTML += 1;
-});
+ const buttons = document.querySelectorAll('button');
 
-let two = document.querySelector('#two');
-two.addEventListener('click', function() {
-    display.innerHTML += 2;
-})
+ const display = document.querySelector('#operands');
 
-let three = document.querySelector('#three');
-three.addEventListener('click', function() {
-    display.innerHTML += 3;
-});
+ buttons.forEach(function(button) {
+     button.addEventListener('click', calculate);
+ });
 
-let four = document.querySelector('#four');
-four.addEventListener('click', function() {
-    display.innerHTML += 4;
-});
+ function calculate(event) {
 
-let five = document.querySelector('#five');
-five.addEventListener('click', function() {
-    display.innerHTML += 5;
-});
+     const clickedButtonValue = event.target.value;
 
-let six = document.querySelector('#six');
-six.addEventListener('click', function() {
-    display.innerHTML += 6;
-});
+     if (clickedButtonValue === '=') {
 
-let seven = document.querySelector('#seven');
-seven.addEventListener('click', function() {
-    display.innerHTML += 7;
-});
+         if (display.value !== '') {
 
-let eight = document.querySelector('#eight');
-eight.addEventListener('click', function() {
-    display.innerHTML += 8;
-});
+             document.querySelector('#ans').innerHTML = cal.calculate(display.value);
+         }
+     } else if (clickedButtonValue === 'C') {
+
+         display.value = '';
+         document.querySelector('#ans').innerHTML = '';
+     } else {
+         display.value += clickedButtonValue;
+     }
+ }
